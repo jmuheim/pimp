@@ -24,6 +24,7 @@ en:
     list: List %{resource}
   shared:
     form:
+      details: Details
       stale_info:
         attribute: Attribute
         difference: Difference
@@ -34,6 +35,8 @@ en:
         new_value: New value
         no_diff_available: No diff possible
         stale_attributes: Attributes that have been changed
+    show:
+      additional_information: Additional information
   'true': 'Yes'
   users:
     form:

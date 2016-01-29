@@ -5,6 +5,13 @@ de:
       defaults:
         created_at: Erstellt am
         updated_at: Aktualisiert am
+      pad:
+        name: Name
+        description: Beschreibung
+        content: Inhalt
+        lock_version: Anzahl Überspeichern
+        created_at: Erstellt am
+        updated_at: Aktualisiert am
       role:
         created_at: Erstellt am
         name: Name
@@ -31,6 +38,9 @@ de:
         roles: Rollen
         updated_at: Aktualisiert am
     models:
+      pad:
+        one: Schreibunterlage
+        other: Schreibunterlagen
       user:
         one: Benutzer
         other: Benutzer

@@ -22,6 +22,11 @@ nav#navigation.container
           - navigation.group User.model_name.human(count: 2), class: active_if_controller?(:users) do
             - navigation.item t('resources.list', resource: User.model_name.human(count: 2)), users_path
             - navigation.item t('resources.create', resource: User.model_name.human), new_user_path if user_signed_in? && can?(:create, User)
+
+          - navigation.group Pad.model_name.human(count: 2), class: active_if_controller?(:pads) do
+            - navigation.item t('resources.list', resource: Pad.model_name.human(count: 2)), pads_path
+            - navigation.item t('resources.create', resource: Pad.model_name.human), new_pad_path if user_signed_in? && can?(:create, Pad)
+
           - navigation.item t('.about'), page_path('about')
 
         h3.sr-only = t '.meta_navigation'

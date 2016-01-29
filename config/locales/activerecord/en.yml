@@ -5,6 +5,13 @@ en:
       defaults:
         created_at: Created at
         updated_at: Updated at
+      pad:
+        name: Name
+        description: Description
+        content: Content
+        lock_version: Number of overwrites
+        created_at: Created at
+        updated_at: Updated at
       role:
         created_at: Created at
         name: Name
@@ -31,6 +38,9 @@ en:
         roles: Roles
         updated_at: Updated at
     models:
+      pad:
+        one: Pad
+        other: Pads
       user:
         one: User
         other: Users
