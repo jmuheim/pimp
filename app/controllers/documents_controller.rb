@@ -8,10 +8,15 @@ class DocumentsController < InheritedResources::Base
   private
 
   def document_params
-    params.require(:document).permit(:name,
-                                :description,
-                                :content,
-                                :lock_version)
+    params.require(:document).permit( :name,
+                                      :description,
+                                      :content,
+                                      :lock_version,
+                                      images_attributes: [ :id,
+                                                           :object,
+                                                           :_destroy
+                                                         ]
+                                    )
   end
 
   def add_base_breadcrumbs

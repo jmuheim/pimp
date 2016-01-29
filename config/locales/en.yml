@@ -5,6 +5,11 @@ en:
     slogan: Pre-configured basic Rails project. Fork me!
   buttons:
     save: Save
+  documents:
+    form:
+      add_image: Add image
+    image_fields:
+      remove_image: Remove image
   'false': 'No'
   org:
     name: MuheimWebdesign

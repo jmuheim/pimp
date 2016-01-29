@@ -12,4 +12,12 @@
       = f.input :description
       = f.input :content
 
+      #images
+        = f.simple_fields_for :images do |image|
+          = render 'image_fields', f: image
+        p.links
+          = link_to_add_association f, :images do
+            => fa_icon 'plus-circle'
+            = t '.add_image'
+
   == render 'shared/form/actions', form: f, resource: resource

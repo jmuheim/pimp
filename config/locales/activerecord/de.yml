@@ -12,6 +12,11 @@ de:
         lock_version: Anzahl Überspeichern
         name: Name
         updated_at: Aktualisiert am
+        images: Bilder
+      image:
+        created_at: Erstellt am
+        object: Objekt
+        updated_at: Aktualisiert am
       role:
         created_at: Erstellt am
         name: Name
