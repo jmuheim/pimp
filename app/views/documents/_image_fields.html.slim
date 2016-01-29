@@ -1,6 +1,6 @@
 .nested-fields
-= f.input :object
+  = f.input :object, as: :upload
 
-= link_to_remove_association f do
-  = t '.remove_image'
-  =< fa_icon 'times-circle'
+  = link_to_remove_association f do
+    = t '.remove_image'
+    =< fa_icon 'times-circle'
