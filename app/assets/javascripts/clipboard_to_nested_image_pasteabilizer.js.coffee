@@ -4,21 +4,25 @@
 class App.ClipboardToNestedImagePasteabilizer
   constructor: (el) ->
     $el = $(el)
+    @$input = $el.find 'textarea#document_content'
+    @$add_image_link = $el.find 'a.add_fields'
 
-    @$input = $el
-
-    @removeWhitespace()
     @makePastable()
-
-  # We need to do this because of this problem: https://github.com/nathanvda/cocoon/issues/323
-  removeWhitespace: ->
-    if @$input.val().trim() == ''
-      @$input.val('')
 
   makePastable: ->
     @$input.pastableTextarea()
     @$input.on('pasteImage', (ev, data) =>
-      @$input.val(data.dataURL)
+      @$add_image_link.click() # Add another file input field
+      $nested_fields = $('.nested-fields:last')
+      $file_field = $nested_fields.find('textarea:first')
+      $temporary_identifier_field = $nested_fields.find('textarea:last')
+      temporary_id = $file_field.attr('id').match(/_(\d+)_file$/)[1]
+
+      $file_field.val(data.dataURL)
+      $temporary_identifier_field.val(temporary_id)
+
+      alternative_text = prompt('Please enter an alternative text for the pasted field.', 'Screenshot')
+      @$input.val("#{@$input.val()}![#{alternative_text}](#{temporary_id})")
       return
     ).on 'pasteText', (ev, data) ->
       return

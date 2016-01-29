@@ -7,7 +7,7 @@
     - unless document.content.blank?
       h2 = Document.human_attribute_name :content
       .content
-        pre = document.content
+        pre = document.content_for_html
 
     - if document.images.any?
       h2 = Document.human_attribute_name :images

@@ -8,4 +8,14 @@ class Document < ActiveRecord::Base
     # Ignore lock_version and _destroy when checking for attributes
     attributes.all? { |key, value| %w(_destroy lock_version).include?(key) || value.blank? }
   }
+
+  def content_for_html
+    content.lines.map do |line|
+      images.each do |image|
+        line.gsub! /\(#{image.temporary_identifier}\)/, "(#{image.file.url})"
+      end
+
+      line
+    end.join "\n\n"
+  end
 end
