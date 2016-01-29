@@ -1,8 +1,8 @@
 ---
 de:
   app:
-    acronym: Pimp
-    name: Pimp Editor
+    acronym: PIMP
+    name: PIMP Editor
     slogan: Vorkonfiguriertes grundlegendes Rails Projekt. Fork erstellen!
   buttons:
     save: Speichern
@@ -11,9 +11,9 @@ de:
     name: MuheimWebdesign
   pages:
     about:
-      title: "Über Pimp"
+      title: "Über PIMP Editor"
     home:
-      title: Willkommen auf Pimp!
+      title: Willkommen auf dem PIMP Editor!
     news:
       title: Letzte Neuigkeiten
     statistics:

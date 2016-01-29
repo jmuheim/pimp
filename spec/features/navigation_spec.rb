@@ -7,7 +7,7 @@ describe 'Navigation' do
         visit root_path
 
         within 'nav' do
-          expect(page).to have_link 'Base'
+          expect(page).to have_link 'PIMP Editor'
 
           within '#content_navigation' do
             expect(page).to     have_link 'List Users'
@@ -33,7 +33,7 @@ describe 'Navigation' do
         visit root_path
 
         within 'nav' do
-          expect(page).to have_link 'Base'
+          expect(page).to have_link 'PIMP Editor'
 
           within '#content_navigation' do
             expect(page).to     have_link 'List Users'
@@ -59,7 +59,7 @@ describe 'Navigation' do
         visit root_path
 
         within 'nav' do
-          expect(page).to have_link 'Base'
+          expect(page).to have_link 'PIMP Editor'
 
           within '#content_navigation' do
             expect(page).to have_link 'List Users'
@@ -90,7 +90,7 @@ describe 'Navigation' do
 
     expect(page).to have_css '#language_chooser .dropdown-toggle', text: 'Choose language'
   end
-  
+
   it 'shows the "Menu" button on small, medium, and large screens (and collapses it on extra small ones)', js: true do
     visit root_path
 

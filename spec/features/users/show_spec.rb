@@ -10,7 +10,7 @@ describe 'Showing user' do
     visit user_path(@user)
 
     expect(page).to have_active_navigation_items 'Users'
-    expect(page).to have_breadcrumbs 'Base', 'Users', 'donald'
+    expect(page).to have_breadcrumbs 'PIMP Editor', 'Users', 'donald'
     expect(page).to have_headline 'donald'
 
     within dom_id_selector(@user) do

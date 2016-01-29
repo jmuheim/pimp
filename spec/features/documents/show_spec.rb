@@ -10,7 +10,7 @@ describe 'Showing document' do
     visit document_path(@document)
 
     expect(page).to have_active_navigation_items 'Documents'
-    expect(page).to have_breadcrumbs 'Pimp', 'Documents', 'Document test name'
+    expect(page).to have_breadcrumbs 'PIMP Editor', 'Documents', 'Document test name'
     expect(page).to have_headline 'Document test name'
 
     within dom_id_selector(@document) do

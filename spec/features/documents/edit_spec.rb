@@ -8,7 +8,7 @@ describe 'Editing document' do
     visit edit_document_path(@document)
 
     expect(page).to have_active_navigation_items 'Documents'
-    expect(page).to have_breadcrumbs 'Pimp', 'Documents', 'Document test name', 'Edit'
+    expect(page).to have_breadcrumbs 'PIMP Editor', 'Documents', 'Document test name', 'Edit'
     expect(page).to have_headline 'Edit Document test name'
 
     fill_in 'document_name',        with: 'A new name'

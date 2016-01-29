@@ -6,7 +6,7 @@ describe 'Requesting new password' do
   it 'is possible to request a new password' do
     visit new_user_password_path
 
-    expect(page).to have_breadcrumbs 'Base', 'Forgot your password?'
+    expect(page).to have_breadcrumbs 'PIMP Editor', 'Forgot your password?'
     expect(page).to have_headline 'Forgot your password?'
 
     within '#new_user' do

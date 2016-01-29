@@ -10,7 +10,7 @@ describe 'Editing account' do
     visit edit_user_registration_path
 
     expect(page).to have_active_navigation_items 'User menu', 'Edit account'
-    expect(page).to have_breadcrumbs 'Base', 'Edit account'
+    expect(page).to have_breadcrumbs 'PIMP Editor', 'Edit account'
     expect(page).to have_headline 'Edit account'
 
     fill_in 'user_name',  with: 'gustav'
