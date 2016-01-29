@@ -6,7 +6,7 @@ describe 'Creating document' do
   it 'creates a document' do
     visit new_document_path
 
-    # expect(page).to have_active_navigation_items 'Documents', 'Create Document'
+    expect(page).to have_active_navigation_items 'Documents', 'Create Document'
     expect(page).to have_breadcrumbs 'PIMP Editor', 'Documents', 'Create Document'
     expect(page).to have_headline 'Create Document'
 
