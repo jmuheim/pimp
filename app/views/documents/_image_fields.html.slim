@@ -1,5 +1,6 @@
 .nested-fields
-  = f.input :file, as: :upload
+  / Ugly maxlength, see https://github.com/carrierwaveuploader/carrierwave/issues/1851
+  = f.input :file, as: :text, maxlength: -1
 
   = link_to_remove_association f do
     = t '.remove_image'

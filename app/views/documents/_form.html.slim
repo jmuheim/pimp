@@ -10,7 +10,7 @@
     = panel.body do
       = f.input :name
       = f.input :description
-      = f.input :content
+      = f.input :content, input_html: {data: {'paste-to-nested-image' => true}}
 
       #images
         = f.simple_fields_for :images do |image|

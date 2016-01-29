@@ -62,6 +62,8 @@ gem 'paper_trail', '~> 4.0.0.rc' # Track changes to your models' data. Good for 
 
 gem 'carrierwave' # Classier solution for file uploads for Rails
 
+gem 'carrierwave-base64' # Upload files encoded as base64 to carrierwave
+
 gem 'mini_magick' # Mini replacement for RMagick
 
 gem 'fancybox2-rails' # Fancybox (lightbox clone)
