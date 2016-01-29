@@ -5,6 +5,13 @@ en:
       defaults:
         created_at: Created at
         updated_at: Updated at
+      document:
+        content: Content
+        created_at: Created at
+        description: Description
+        lock_version: Number of overwrites
+        name: Name
+        updated_at: Updated at
       role:
         created_at: Created at
         name: Name
@@ -31,6 +38,9 @@ en:
         roles: Roles
         updated_at: Updated at
     models:
+      document:
+        one: Document
+        other: Documents
       user:
         one: User
         other: Users

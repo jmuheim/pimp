@@ -1,0 +1,5 @@
+= container_for @document do
+  = headline_with_flash @document.name
+
+  == render 'details', document: @document
+  == render 'shared/show/actions', resource: @document

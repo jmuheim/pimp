@@ -22,6 +22,11 @@ nav#navigation.container
           - navigation.group User.model_name.human(count: 2), class: active_if_controller?(:users) do
             - navigation.item t('resources.list', resource: User.model_name.human(count: 2)), users_path
             - navigation.item t('resources.create', resource: User.model_name.human), new_user_path if user_signed_in? && can?(:create, User)
+
+          - navigation.group Document.model_name.human(count: 2), class: active_if_controller?(:documents) do
+            - navigation.item t('resources.list', resource: Document.model_name.human(count: 2)), documents_path
+            - navigation.item t('resources.create', resource: Document.model_name.human), new_document_path if user_signed_in? && can?(:create, Document)
+
           - navigation.item t('.about'), page_path('about')
 
         h3.sr-only = t '.meta_navigation'
@@ -63,6 +68,6 @@ nav#navigation.container
   #breadcrumbs.breadcrumb
     h3 #{t '.you_are_here'}:
     ol.breadcrumb
-      li = link_to t('app.acronym'), root_path
+      li = link_to t('app.name'), root_path
       = render_breadcrumbs tag: :li, separator: ''
       li = truncate @last_breadcrumb || headline, length: 30, separator: ' '

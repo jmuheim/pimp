@@ -20,7 +20,7 @@ describe 'Showing account' do
 
     it 'displays the account' do
       expect(page).to have_active_navigation_items 'User menu', 'Show account'
-      expect(page).to have_breadcrumbs 'Base', 'Welcome, donald!'
+      expect(page).to have_breadcrumbs 'PIMP Editor', 'Welcome, donald!'
       expect(page).to have_headline 'Welcome, donald!'
 
       within dom_id_selector(@user) do

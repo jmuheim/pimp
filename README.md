@@ -1,4 +1,4 @@
-# PIMP - Pasteable Images Markdown Pad
+# PIMP - Pasteable Images Markdown Document
 
 TODO: Add badges!
 

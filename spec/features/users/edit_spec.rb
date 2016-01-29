@@ -31,7 +31,7 @@ describe 'Editing user' do
       visit edit_user_path(@user)
 
       expect(page).to have_active_navigation_items 'Users'
-      expect(page).to have_breadcrumbs 'Base', 'Users', 'donald', 'Edit'
+      expect(page).to have_breadcrumbs 'PIMP Editor', 'Users', 'donald', 'Edit'
       expect(page).to have_headline 'Edit donald'
 
       fill_in 'user_name',  with: 'gustav'

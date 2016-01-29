@@ -1,8 +1,7 @@
 ---
 en:
   app:
-    acronym: Base
-    name: Base Project
+    name: PIMP Editor
     slogan: Pre-configured basic Rails project. Fork me!
   buttons:
     save: Save
@@ -11,9 +10,9 @@ en:
     name: MuheimWebdesign
   pages:
     about:
-      title: About Base
+      title: About PIMP Editor
     home:
-      title: Welcome to Base!
+      title: Welcome to PIMP Editor!
     news:
       title: Latest news
     statistics:
@@ -24,6 +23,7 @@ en:
     list: List %{resource}
   shared:
     form:
+      details: Details
       stale_info:
         attribute: Attribute
         difference: Difference
@@ -34,6 +34,9 @@ en:
         new_value: New value
         no_diff_available: No diff possible
         stale_attributes: Attributes that have been changed
+    show:
+      additional_information: Additional information
+      number_in_total: Number in total
   'true': 'Yes'
   users:
     form:

@@ -1,0 +1,6 @@
+tr id=dom_id(document)
+  th.name                  = link_to_if can?(:read, document), document.name, document
+  td.description.hidden-xs = document.description
+
+  td.actions
+    == render 'shared/index/actions', resource: document

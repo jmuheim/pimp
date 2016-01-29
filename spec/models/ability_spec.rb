@@ -7,6 +7,16 @@ describe Ability do
   context 'when is a guest' do
     subject { Ability.new nil }
 
+    describe 'managing documents' do
+      it { should_not be_able_to(:create, Document) }
+
+      it { should_not be_able_to(:read, Document.new) }
+
+      it { should_not be_able_to(:update, Document.new) }
+
+      it { should_not be_able_to(:destroy, Document.new) }
+    end
+
     describe 'managing roles' do
       it { should_not be_able_to(:create, Role) }
 
@@ -31,6 +41,16 @@ describe Ability do
   context 'when is a registered user' do
     before  { @user = create(:user) }
     subject { Ability.new(@user) }
+
+    describe 'managing documents' do
+      it { should be_able_to(:create, Document) }
+
+      it { should be_able_to(:read, Document.new) }
+
+      it { should be_able_to(:update, Document.new) }
+
+      it { should be_able_to(:destroy, Document.new) }
+    end
 
     describe 'managing roles' do
       it { should_not be_able_to(:create, Role) }
@@ -60,6 +80,16 @@ describe Ability do
     subject { Ability.new(@admin) }
 
     it { should be_able_to(:access, :rails_admin) }
+
+    describe 'managing documents' do
+      it { should be_able_to(:create, Document) }
+
+      it { should be_able_to(:read, Document.new) }
+
+      it { should be_able_to(:update, Document.new) }
+
+      it { should be_able_to(:destroy, Document.new) }
+    end
 
     describe 'managing roles' do
       it { should be_able_to(:create, Role) }

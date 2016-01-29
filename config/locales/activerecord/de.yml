@@ -5,6 +5,13 @@ de:
       defaults:
         created_at: Erstellt am
         updated_at: Aktualisiert am
+      document:
+        content: Inhalt
+        created_at: Erstellt am
+        description: Beschreibung
+        lock_version: Anzahl Überspeichern
+        name: Name
+        updated_at: Aktualisiert am
       role:
         created_at: Erstellt am
         name: Name
@@ -31,6 +38,9 @@ de:
         roles: Rollen
         updated_at: Aktualisiert am
     models:
+      document:
+        one: Dokument
+        other: Dokumente
       user:
         one: Benutzer
         other: Benutzer

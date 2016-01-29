@@ -19,6 +19,8 @@ class Ability
         user == current_user # Update himself
       end
 
+      can :crud, Document
+
       if current_user.has_role?(:admin)
         can :access, :rails_admin
         can :dashboard
