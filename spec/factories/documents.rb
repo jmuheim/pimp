@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :pad do
+  factory :document do
     name "MyString"
 description "MyText"
 content "MyText"

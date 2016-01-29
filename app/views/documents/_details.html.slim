@@ -1,0 +1,23 @@
+.row
+  .col-md-8
+    - unless document.description.blank?
+      h2 = Document.human_attribute_name :description
+      .description = document.description
+
+    - unless document.content.blank?
+      h2 = Document.human_attribute_name :content
+      .description
+        pre = document.content
+
+  .col-md-4
+    h2 = t 'shared.show.additional_information'
+
+    dl
+      dt = Document.human_attribute_name :lock_version
+      dd.lock_version = document.lock_version
+
+      dt = Document.human_attribute_name :created_at
+      dd.created_at = l document.created_at
+
+      dt = Document.human_attribute_name :updated_at
+      dd.updated_at = l document.updated_at

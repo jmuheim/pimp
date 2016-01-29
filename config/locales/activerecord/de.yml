@@ -5,7 +5,7 @@ de:
       defaults:
         created_at: Erstellt am
         updated_at: Aktualisiert am
-      pad:
+      document:
         name: Name
         description: Beschreibung
         content: Inhalt
@@ -38,9 +38,9 @@ de:
         roles: Rollen
         updated_at: Aktualisiert am
     models:
-      pad:
-        one: Schreibunterlage
-        other: Schreibunterlagen
+      document:
+        one: Dokument
+        other: Dokumente
       user:
         one: Benutzer
         other: Benutzer

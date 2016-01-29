@@ -5,7 +5,7 @@ en:
       defaults:
         created_at: Created at
         updated_at: Updated at
-      pad:
+      document:
         name: Name
         description: Description
         content: Content
@@ -38,9 +38,9 @@ en:
         roles: Roles
         updated_at: Updated at
     models:
-      pad:
-        one: Pad
-        other: Pads
+      document:
+        one: Document
+        other: Documents
       user:
         one: User
         other: Users

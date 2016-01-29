@@ -1,8 +1,8 @@
 ---
 de:
   app:
-    acronym: Base
-    name: Base Project
+    acronym: Pimp
+    name: Pimp Editor
     slogan: Vorkonfiguriertes grundlegendes Rails Projekt. Fork erstellen!
   buttons:
     save: Speichern
@@ -11,9 +11,9 @@ de:
     name: MuheimWebdesign
   pages:
     about:
-      title: "Über Base"
+      title: "Über Pimp"
     home:
-      title: Willkommen auf Base!
+      title: Willkommen auf Pimp!
     news:
       title: Letzte Neuigkeiten
     statistics:

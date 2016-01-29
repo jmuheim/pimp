@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20160129155247) do
 
-  create_table "pads", force: :cascade do |t|
+  create_table "documents", force: :cascade do |t|
     t.string   "name",         limit: 255
     t.text     "description",  limit: 65535
     t.text     "content",      limit: 65535
