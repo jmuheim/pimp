@@ -5,6 +5,11 @@ de:
     slogan: Vorkonfiguriertes grundlegendes Rails Projekt. Fork erstellen!
   buttons:
     save: Speichern
+  documents:
+    form:
+      add_image: Bild hinzufügen
+    image_fields:
+      remove_image: Bild entfernen
   'false': Nein
   org:
     name: MuheimWebdesign

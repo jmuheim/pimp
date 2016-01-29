@@ -12,4 +12,10 @@ RSpec.describe "documents/show", type: :view do
     render
     expect(rendered).not_to have_selector('.content')
   end
+
+  it "Doesn't render empty images" do
+    assign :document, create(:document, images: [])
+    render
+    expect(rendered).not_to have_selector('.images')
+  end
 end

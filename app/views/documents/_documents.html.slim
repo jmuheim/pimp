@@ -6,7 +6,7 @@ table.table.table-striped.table-hover.documents
   thead
     tr
       th.name                  = Document.human_attribute_name :name
-      th.description.hidden-xs = Document.human_attribute_name :boilerplate_originals
+      th.description.hidden-xs = Document.human_attribute_name :description
       th colspan="3"           = t 'actions.actions'
 
   tbody

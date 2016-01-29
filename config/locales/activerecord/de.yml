@@ -12,6 +12,11 @@ de:
         lock_version: Anzahl Überspeichern
         name: Name
         updated_at: Aktualisiert am
+        images: Bilder
+      image:
+        created_at: Erstellt am
+        file: Datei
+        updated_at: Aktualisiert am
       role:
         created_at: Erstellt am
         name: Name
@@ -41,6 +46,9 @@ de:
       document:
         one: Dokument
         other: Dokumente
+      image:
+        one: Bild
+        other: Bilder
       user:
         one: Benutzer
         other: Benutzer

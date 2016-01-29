@@ -12,6 +12,11 @@ en:
         lock_version: Number of overwrites
         name: Name
         updated_at: Updated at
+        images: Images
+      image:
+        created_at: Created at
+        file: File
+        updated_at: Updated at
       role:
         created_at: Created at
         name: Name
@@ -41,6 +46,9 @@ en:
       document:
         one: Document
         other: Documents
+      image:
+        one: Image
+        other: Images
       user:
         one: User
         other: Users

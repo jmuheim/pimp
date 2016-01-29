@@ -9,6 +9,13 @@
       .content
         pre = document.content
 
+    - if document.images.any?
+      h2 = Document.human_attribute_name :images
+      .images
+        = image_gallery do |gallery|
+          - document.images.each do |image|
+            = gallery.zoomable_image(image.file)
+
   .col-md-4
     h2 = t 'shared.show.additional_information'
 
