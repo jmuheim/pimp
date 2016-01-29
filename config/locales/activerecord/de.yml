@@ -46,6 +46,9 @@ de:
       document:
         one: Dokument
         other: Dokumente
+      image:
+        one: Bild
+        other: Bilder
       user:
         one: Benutzer
         other: Benutzer

@@ -14,7 +14,7 @@ describe 'Creating document' do
     fill_in 'document_description', with: 'newdescription'
     fill_in 'document_content',     with: 'newcontent'
 
-    attach_file 'document_images_attributes_0_object', dummy_file_path('image.jpg')
+    attach_file 'document_images_attributes_0_file', dummy_file_path('image.jpg')
 
     expect {
       click_button 'Create Document'

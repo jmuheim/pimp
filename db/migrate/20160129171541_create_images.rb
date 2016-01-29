@@ -1,7 +1,7 @@
 class CreateImages < ActiveRecord::Migration
   def change
     create_table :images do |t|
-      t.string :object
+      t.string :file
       t.references :document
 
       t.timestamps null: false

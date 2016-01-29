@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20160129171541) do
   end
 
   create_table "images", force: :cascade do |t|
-    t.string   "object",      limit: 255
+    t.string   "file",        limit: 255
     t.integer  "document_id", limit: 4
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false

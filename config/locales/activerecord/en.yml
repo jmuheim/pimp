@@ -46,6 +46,9 @@ en:
       document:
         one: Document
         other: Documents
+      image:
+        one: Image
+        other: Images
       user:
         one: User
         other: Users

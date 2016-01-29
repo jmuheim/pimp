@@ -18,7 +18,7 @@ class DocumentsController < InheritedResources::Base
                                       :content,
                                       :lock_version,
                                       images_attributes: [ :id,
-                                                           :object,
+                                                           :file,
                                                            :_destroy
                                                          ]
                                     )
