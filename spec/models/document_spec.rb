@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe Document, type: :model do
   it { should validate_presence_of(:name).with_message "can't be blank" }
   it { should have_many(:images) }
+  it { should accept_nested_attributes_for(:images) }
 
   it 'has a valid factory' do
     expect(create :document).to be_valid
