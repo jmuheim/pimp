@@ -15,7 +15,7 @@ en:
         images: Images
       image:
         created_at: Created at
-        object: Object
+        file: File
         updated_at: Updated at
       role:
         created_at: Created at

@@ -15,7 +15,7 @@ de:
         images: Bilder
       image:
         created_at: Erstellt am
-        object: Objekt
+        file: Datei
         updated_at: Aktualisiert am
       role:
         created_at: Erstellt am
