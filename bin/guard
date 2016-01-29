@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+#
+# This version of the guard runner restarts automatically when Guardfile changes.
+#
+# See https://github.com/guard/guard/wiki/Guard-2.10.3-exits-when-Guardfile-is-changed
+ 
+require 'pathname'
+ENV['BUNDLE_GEMFILE'] ||= (Pathname(__FILE__).realpath + '../../Gemfile').to_s
+ 
+require 'rubygems'
+require 'bundler/setup'
+ 
+while !system(Gem.bin_path('guard', 'guard')) && $?.exitstatus == 2
+  puts('Restarting guard...')
+end
+exit($?.exitstatus)

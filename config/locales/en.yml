@@ -1,0 +1,41 @@
+---
+en:
+  app:
+    acronym: Base
+    name: Base Project
+    slogan: Pre-configured basic Rails project. Fork me!
+  buttons:
+    save: Save
+  'false': 'No'
+  org:
+    name: MuheimWebdesign
+  pages:
+    about:
+      title: About Base
+    home:
+      title: Welcome to Base!
+    news:
+      title: Latest news
+    statistics:
+      number_of_resource: Anzahl %{resource}
+      title: Statistics
+  resources:
+    create: Create %{resource}
+    list: List %{resource}
+  shared:
+    form:
+      stale_info:
+        attribute: Attribute
+        difference: Difference
+        instructions: At the time being, the form only contains your changes ("New value"). Please merge the interim changes by the other user manually. Only save, when you are sure, that no changes are abandoned by error!
+        interim_image: Interim image
+        interim_value: Interim value
+        new_image: New image
+        new_value: New value
+        no_diff_available: No diff possible
+        stale_attributes: Attributes that have been changed
+  'true': 'Yes'
+  users:
+    form:
+      details: Details
+      password: Password

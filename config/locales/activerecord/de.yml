@@ -1,0 +1,36 @@
+---
+de:
+  activerecord:
+    attributes:
+      defaults:
+        created_at: Erstellt am
+        updated_at: Aktualisiert am
+      role:
+        created_at: Erstellt am
+        name: Name
+        resource_type: Ressource
+        updated_at: Aktualisiert am
+      user:
+        about: "Über"
+        avatar: Profilbild
+        confirmed_at: Bestätigt am
+        created_at: Erstellt am
+        current_password: Aktuelles Passwort
+        current_sign_in_at: Eingeloggt seit
+        current_sign_in_ip: Momentane IP
+        email: Email
+        failed_attempts: Fehlgeschlagene Versuche
+        last_sign_in_at: Letztes Login am
+        last_sign_in_ip: Letzte IP
+        locked_at: Gesperrt am
+        login: Login
+        name: Name
+        password: Passwort
+        password_confirmation: Passwortbestätigung
+        remember_me: Eingeloggt bleiben
+        roles: Rollen
+        updated_at: Aktualisiert am
+    models:
+      user:
+        one: Benutzer
+        other: Benutzer

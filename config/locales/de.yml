@@ -1,0 +1,41 @@
+---
+de:
+  app:
+    acronym: Base
+    name: Base Project
+    slogan: Vorkonfiguriertes grundlegendes Rails Projekt. Fork erstellen!
+  buttons:
+    save: Speichern
+  'false': Nein
+  org:
+    name: MuheimWebdesign
+  pages:
+    about:
+      title: "Über Base"
+    home:
+      title: Willkommen auf Base!
+    news:
+      title: Letzte Neuigkeiten
+    statistics:
+      number_of_resource: Anzahl %{resource}
+      title: Statistiken
+  resources:
+    create: "%{resource} erstellen"
+    list: "%{resource} auflisten"
+  shared:
+    form:
+      stale_info:
+        attribute: Attribut
+        difference: Differenz
+        instructions: Das Formular beinhaltet momentan nur deine Änderungen ("Neuer Wert"). Bitte führe die zwischenzeitlich von einem anderen Benutzer getätigten Änderungen manuell zu den deinen hinzu. Speichere erst, wenn du sicher bist, dass dadurch keine Änderungen ungewollt verloren gehen!
+        interim_image: Bisheriges Bild
+        interim_value: Zwischenzeitlicher Wert
+        new_image: Neues Bild
+        new_value: Neuer Wert
+        no_diff_available: Keine Differenz möglich
+        stale_attributes: Attribute, welche verändert worden sind
+  'true': Ja
+  users:
+    form:
+      details: Details
+      password: Passwort

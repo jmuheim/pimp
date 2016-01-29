@@ -1,0 +1,36 @@
+---
+en:
+  activerecord:
+    attributes:
+      defaults:
+        created_at: Created at
+        updated_at: Updated at
+      role:
+        created_at: Created at
+        name: Name
+        resource_type: Resource
+        updated_at: Updated at
+      user:
+        about: About
+        avatar: Profile picture
+        confirmed_at: Confirmed at
+        created_at: Created at
+        current_password: Current password
+        current_sign_in_at: Signed in since
+        current_sign_in_ip: Current IP
+        email: Email
+        failed_attempts: Failed attempts
+        last_sign_in_at: Last sign in at
+        last_sign_in_ip: Last IP
+        locked_at: Locked at
+        login: Login
+        name: Name
+        password: Password
+        password_confirmation: Password confirmation
+        remember_me: Remember me
+        roles: Roles
+        updated_at: Updated at
+    models:
+      user:
+        one: User
+        other: Users

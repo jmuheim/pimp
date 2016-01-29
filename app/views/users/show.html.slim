@@ -1,0 +1,6 @@
+= container_for @user do
+  = headline_with_flash @user.name
+
+  == render 'details', user: @user
+
+  == render 'shared/show/actions', resource: @user
