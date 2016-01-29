@@ -4,7 +4,7 @@ describe 'Editing document' do
   before { login_as create :user }
 
   it 'grants permission to edit a document' do
-    @document = create :document
+    @document = create :document, :with_image
     visit edit_document_path(@document)
 
     expect(page).to have_active_navigation_items 'Documents'
@@ -15,12 +15,15 @@ describe 'Editing document' do
     fill_in 'document_description', with: 'Cooool description!'
     fill_in 'document_content',     with: 'Some nice content'
 
+    attach_file 'document_images_attributes_0_object', dummy_file_path('other_image.jpg')
+
     expect {
       click_button 'Update Document'
       @document.reload
     } .to  change { @document.name }.to('A new name')
       .and change { @document.description }.to('Cooool description!')
       .and change { @document.content }.to('Some nice content')
+      .and change { @document.images.first.object.file.identifier }.to('other_image.jpg')
   end
 
   it "prevents from overwriting other users' changes accidently (caused by race conditions)" do

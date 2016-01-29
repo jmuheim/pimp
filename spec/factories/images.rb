@@ -1,6 +1,5 @@
 FactoryGirl.define do
   factory :image do
-    name "MyString"
+    object { File.open dummy_file_path('image.jpg') }
   end
-
 end
