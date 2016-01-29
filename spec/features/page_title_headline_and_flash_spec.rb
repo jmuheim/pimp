@@ -11,8 +11,8 @@ describe 'Page title, headline and flash' do
   it 'displays the page title and the headline on other pages' do
     visit page_path('about')
 
-    expect(page).to have_title 'About Base - Base'
-    expect(page).to have_css 'main h1', text: 'About Base'
+    expect(page).to have_title 'About PIMP Editor - PIMP Editor'
+    expect(page).to have_css 'main h1', text: 'About PIMP Editor'
   end
 
   context 'with flash' do
@@ -20,7 +20,7 @@ describe 'Page title, headline and flash' do
       visit root_path
       click_button 'Sign in' # Trigger validation error
 
-      expect(page).to have_title 'Alert: Invalid login or password. Sign in - Base'
+      expect(page).to have_title 'Alert: Invalid login or password. Sign in - PIMP Editor'
       within 'main' do
         expect(page).to have_css 'h1', text: 'Sign in'
         expect(page).to have_content 'Alert: Invalid login or password'

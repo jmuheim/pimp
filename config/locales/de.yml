@@ -1,7 +1,6 @@
 ---
 de:
   app:
-    acronym: PIMP
     name: PIMP Editor
     slogan: Vorkonfiguriertes grundlegendes Rails Projekt. Fork erstellen!
   buttons:

@@ -1,7 +1,6 @@
 ---
 en:
   app:
-    acronym: PIMP
     name: PIMP Editor
     slogan: Pre-configured basic Rails project. Fork me!
   buttons:
