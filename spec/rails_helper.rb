@@ -86,7 +86,7 @@ RSpec.configure do |config|
 end
 
 RSpec.configure do |config|
-  config.include Base::Matchers, type: :feature
+  config.include Pimp::Matchers, type: :feature
 end
 
 Shoulda::Matchers.configure do |config|

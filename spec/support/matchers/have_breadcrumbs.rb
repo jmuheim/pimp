@@ -1,4 +1,4 @@
-module Base
+module Pimp
   module Matchers
     class HaveBreadcrumbs
       def initialize(*breadcrumbs)
