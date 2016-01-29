@@ -1,0 +1,13 @@
+dl.dl-horizontal
+  dt = t 'shared.show.number_in_total'
+  dd.number_in_total = documents.size
+
+table.table.table-striped.table-hover.documents
+  thead
+    tr
+      th.name                  = Document.human_attribute_name :name
+      th.description.hidden-xs = Document.human_attribute_name :boilerplate_originals
+      th colspan="3"           = t 'actions.actions'
+
+  tbody
+    = render documents

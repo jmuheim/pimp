@@ -6,11 +6,11 @@ en:
         created_at: Created at
         updated_at: Updated at
       document:
-        name: Name
-        description: Description
         content: Content
-        lock_version: Number of overwrites
         created_at: Created at
+        description: Description
+        lock_version: Number of overwrites
+        name: Name
         updated_at: Updated at
       role:
         created_at: Created at

@@ -1,9 +1,7 @@
 FactoryGirl.define do
   factory :document do
-    name "MyString"
-description "MyText"
-content "MyText"
-user_id 1
+    name        'Document test name'
+    description 'Document test description'
+    content     'Document test content'
   end
-
 end

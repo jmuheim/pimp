@@ -6,11 +6,11 @@ de:
         created_at: Erstellt am
         updated_at: Aktualisiert am
       document:
-        name: Name
-        description: Beschreibung
         content: Inhalt
-        lock_version: Anzahl Überspeichern
         created_at: Erstellt am
+        description: Beschreibung
+        lock_version: Anzahl Überspeichern
+        name: Name
         updated_at: Aktualisiert am
       role:
         created_at: Erstellt am

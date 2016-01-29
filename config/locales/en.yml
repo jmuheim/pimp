@@ -37,6 +37,7 @@ en:
         stale_attributes: Attributes that have been changed
     show:
       additional_information: Additional information
+      number_in_total: Number in total
   'true': 'Yes'
   users:
     form:
