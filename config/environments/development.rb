@@ -1,4 +1,4 @@
-Base::Application.configure do
+Pimp::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -33,7 +33,7 @@ Base::Application.configure do
   # available at this point, so we just insert before Rack::Lock which is nearly
   # at the top of the stack.
   config.middleware.insert_before Rack::Lock, Rack::LiveReload, no_swf:           true,
-                                                                live_reload_port: 35729
+                                                                live_reload_port: 35744
 
   # TODO: This should be retrieved from DefaultOptions, see http://stackoverflow.com/questions/3842818#comment46921326_23489706
   config.action_mailer.default_url_options = {host: 'localhost:3001'}

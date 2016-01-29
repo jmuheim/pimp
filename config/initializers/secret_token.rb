@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Base::Application.config.secret_key_base = 'f4477ea10b1be4371a20f9b4be85f84dcc45d22d5e8cc35e282412826ba7bc4667df27d7633108b684fede98e70188d255fec0d9020dbc344d8cbbd2ed38f350'
+Pimp::Application.config.secret_key_base = '35ab622e984f7d48dc968af9bee9cb102dacfd5c51e47ab4b2b8ad5fdca172712081af640ce0dbc2c32b9b990977606d545d446983b65dcce501fcdbf9a348b8'

@@ -7,7 +7,7 @@ require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
 require 'rails/commands/server'
 module DefaultOptions
   def default_options
-    super.merge!(Port: 3001)
+    super.merge!(Port: 3007)
   end
 end
 Rails::Server.send(:prepend, DefaultOptions)
