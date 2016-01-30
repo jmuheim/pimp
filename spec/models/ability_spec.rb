@@ -10,7 +10,7 @@ describe Ability do
     describe 'managing documents' do
       it { should_not be_able_to(:create, Document) }
 
-      it { should_not be_able_to(:read, Document.new) }
+      it { should     be_able_to(:read, Document.new) }
 
       it { should_not be_able_to(:update, Document.new) }
 
