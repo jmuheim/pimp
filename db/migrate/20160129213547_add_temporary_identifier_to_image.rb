@@ -1,5 +1,5 @@
 class AddTemporaryIdentifierToImage < ActiveRecord::Migration
   def change
-    add_column :images, :temporary_identifier, :text
+    add_column :images, :identifier, :string
   end
 end

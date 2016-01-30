@@ -12,10 +12,10 @@ class Document < ActiveRecord::Base
   def content_for_html
     content.lines.map do |line|
       images.each do |image|
-        line.gsub! /\(#{image.temporary_identifier}\)/, "(#{image.file.url})"
+        line.gsub! /\(#{image.identifier}\)/, "(#{image.file.url})"
       end
 
       line
-    end.join "\n\n"
+    end.join
   end
 end

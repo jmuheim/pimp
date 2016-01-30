@@ -14,8 +14,8 @@ class App.ClipboardToNestedImagePasteabilizer
     @$input.on('pasteImage', (ev, data) =>
       @$add_image_link.click() # Add another file input field
       $nested_fields = $('.nested-fields:last')
-      $file_field = $nested_fields.find('textarea:first')
-      $temporary_identifier_field = $nested_fields.find('textarea:last')
+      console.log $file_field = $nested_fields.find(':input[id$="_file"]')
+      console.log $temporary_identifier_field = $nested_fields.find(':input[id$="_identifier"]')
       temporary_id = $file_field.attr('id').match(/_(\d+)_file$/)[1]
 
       $file_field.val(data.dataURL)

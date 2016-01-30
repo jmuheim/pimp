@@ -23,11 +23,11 @@ ActiveRecord::Schema.define(version: 20160129213547) do
   end
 
   create_table "images", force: :cascade do |t|
-    t.string   "file",                 limit: 255
-    t.integer  "document_id",          limit: 4
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
-    t.text     "temporary_identifier", limit: 65535
+    t.string   "file",        limit: 255
+    t.integer  "document_id", limit: 4
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "identifier",  limit: 255
   end
 
   create_table "roles", force: :cascade do |t|
