@@ -16,6 +16,7 @@ en:
       image:
         created_at: Created at
         file: File
+        identifier: Identifier
         updated_at: Updated at
       role:
         created_at: Created at

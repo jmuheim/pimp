@@ -18,10 +18,9 @@ describe 'Creating document' do
       click_link 'Add image'
     } .to change { all('#images .nested-fields').count }.by 1
 
-    file_field_id = page.find('#images .nested-fields [id^="document_images_attributes_"][id$="_file"]')[:id] # Ugly
-    new_nested_fields_id = file_field_id.match(/^document_images_attributes_(\d+)_file$/)[1]
-    fill_in file_field_id, with: base64_image[:data]
-    fill_in "document_images_attributes_#{new_nested_fields_id}_identifier", with: 'some-identifier'
+    nested_field_id = get_latest_nested_field_id(:document_images)
+    fill_in "document_images_attributes_#{nested_field_id}_file", with: base64_image[:data]
+    fill_in "document_images_attributes_#{nested_field_id}_identifier", with: 'some-identifier'
 
     expect {
       click_button 'Create Document'
