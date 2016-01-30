@@ -22,6 +22,7 @@
 #= require example_script
 #= require form_accessibilizer
 #= require clipboard_to_nested_image_pasteabilizer
+#= require clipboard_to_textarea_pasteabilizer
 # --- Add custom requires above here! ---
 #
 #= require init

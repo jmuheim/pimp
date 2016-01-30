@@ -1,8 +1,11 @@
 .nested-fields
-  / Ugly maxlength, see https://github.com/carrierwaveuploader/carrierwave/issues/1851
-  = f.input :file, as: :text, input_html: {data: {'paste-to-nested-image' => true}}, maxlength: -1
-  = f.input :identifier
+  .row
+    .col-md-6
+      = f.input :identifier
 
-  = link_to_remove_association f do
-    = t '.remove_image'
-    =< fa_icon 'times-circle'
+    .col-md-6
+      = f.input :file, as: :paste
+
+      = link_to_remove_association f do
+        = t '.remove_image'
+        =< fa_icon 'times-circle'

@@ -22,7 +22,12 @@ class App.ClipboardToNestedImagePasteabilizer
       $nested_fields = $('.nested-fields:last')
       $file_field = $nested_fields.find(':input[id$="_file"]')
       $temporary_identifier_field = $nested_fields.find(':input[id$="_identifier"]')
-      identifier = [identifier, $file_field.attr('id').match(/_(\d+)_file$/)[1]].join '-'
+      temporary_identifier_id = $file_field.attr('id').match(/_(\d+)_file$/)[1]
+
+      if identifier
+        identifier += "-#{temporary_identifier_id}"
+      else
+        identifier = temporary_identifier_id
 
       $file_field.val(data.dataURL)
       $temporary_identifier_field.val(identifier)

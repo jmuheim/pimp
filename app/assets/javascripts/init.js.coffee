@@ -6,6 +6,7 @@ class App.Init
     @initTooltips @$el
     @initFancybox @$el
     @makeTextareasPasteableToNestedImage @$el
+    @makeTextareasPasteable @$el
 
   makeFormsAccessible: ($el) ->
     $el.find('form.simple_form').each ->
@@ -32,3 +33,8 @@ class App.Init
 
   makeTextareasPasteableToNestedImage: ($el) ->
       new App.ClipboardToNestedImagePasteabilizer $el
+
+
+  makeTextareasPasteable: ($el) ->
+    $el.find('[data-paste]').each ->
+      new App.ClipboardToTextareaPasteabilizer @
