@@ -49,4 +49,31 @@ RSpec.describe Document, type: :model do
       }.to change { document.versions.count }.by 1
     end
   end
+
+  describe 'image path placeholder replacement' do
+    before do
+      @document = create :document, name: 'My cool document',
+                                    content: "This is a paragraph\n\n![This is an image](an-image)\n\n![This is another image](another-image)"
+
+      @document.images << create(:image, identifier: 'an-image')
+    end
+
+    describe '#content_with_referenced_images' do
+      subject { @document.content_with_referenced_images }
+
+      it 'replaces image path placeholders with urls' do
+        should include '![This is an image](/uploads/image/file/1/image.jpg)'
+        should include '![This is another image](another-image)'
+      end
+    end
+
+    describe '#content_with_embedded_images' do
+      subject { @document.content_with_embedded_images }
+
+      it 'replaces image path placeholders with paths' do
+        should match /!\[This is an image\]\((.*)\/uploads\/image\/file\/1\/image.jpg\)/
+        should include '![This is another image](another-image)'
+      end
+    end
+  end
 end
