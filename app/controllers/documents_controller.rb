@@ -25,7 +25,8 @@ class DocumentsController < InheritedResources::Base
   private
 
   def export
-    string_to_export = "% #{@document.name}\n% #{current_user.name}\n% #{l Time.now}\n\n"
+    now = Time.now
+    string_to_export = "% #{@document.name}\n% #{current_user.name}\n% #{l now}\n\n"
 
     respond_to do |format|
       format.html do
@@ -36,9 +37,10 @@ class DocumentsController < InheritedResources::Base
       [:docx, :odt, :epub].each do |format_name|
         format.send format_name do
           string_to_export += @document.content_with_embedded_images
-          send_data PandocRuby.convert(string_to_export, to: format_name), filename:    "#{@document.name}.#{format_name}",
-                                                                           type:        "Mime::#{format_name.upcase}".constantize,
-                                                                           disposition: 'attachment'
+          send_data PandocRuby.convert(string_to_export, to: format_name),
+                                                         filename:    "#{@document.name} (#{l now, format: '%Y-%m-%d %H-%M'}).#{format_name}",
+                                                         type:        "Mime::#{format_name.upcase}".constantize,
+                                                         disposition: 'attachment'
         end
       end
     end
