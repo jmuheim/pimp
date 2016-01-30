@@ -1,10 +1,10 @@
-# PIMP - Pasteable Images Markdown Document
+# PIMP - Pasteable Images Markdown Pad
 
 TODO: Add badges!
 
 ## Setting up project locally
 
-Live project: [ACCOUNT.SERVER.uberspace.de](http://ACCOUNT.SERVER.uberspace.de)
+Live project: [pimp.suhail.uberspace.de](http://pimp.suhail.uberspace.de)
 
 Recommended environment:
 
