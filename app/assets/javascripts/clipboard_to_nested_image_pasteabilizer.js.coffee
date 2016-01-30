@@ -29,7 +29,16 @@ class App.ClipboardToNestedImagePasteabilizer
       else
         identifier = temporary_identifier_id
 
-      $file_field.val(data.dataURL)
+      $previewContainer = $nested_fields.find('.thumbnail')
+      $previewImage     = $previewContainer.find('img')
+      dataUrl = data.dataUrl
+      blobUrl = URL.createObjectURL(data.blob)
+      $file_field.val(dataUrl)                # Set blob string to textarea
+      $previewImage.attr('src', blobUrl) # Set image preview
+
+      $previewContainer.toggle() # Show the image preview
+      $file_field.toggle()            # Hide the textarea
+
       $temporary_identifier_field.val(identifier)
 
       caret_position = @$input.caret()
