@@ -9,7 +9,7 @@ class App.ClipboardToNestedImagePasteabilizer
     @alt_prompt = @$input.data('pasteable-image-alt-prompt')
     @identifier_prompt = @$input.data('pasteable-image-identifier-prompt')
 
-    @makePastable()
+    @makePastable() # TODO: Do something that can be tested using Capybara to make sure that at least the initialisation of stuff works!
 
   makePastable: ->
     @$input.pastableTextarea()
