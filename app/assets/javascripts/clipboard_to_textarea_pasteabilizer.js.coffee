@@ -33,7 +33,7 @@ class App.ClipboardToTextareaPasteabilizer
       return
 
   setValue: (data) ->
-    dataUrl = data.dataUrl
+    dataUrl = data.dataUrl # TODO: Shouldn't this be dataURL??
     blobUrl = URL.createObjectURL(data.blob)
     @$input.val(dataUrl)                # Set blob string to textarea
     @$previewImage.attr('src', blobUrl) # Set image preview
