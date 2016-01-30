@@ -10,7 +10,7 @@
     = panel.body do
       = f.input :name
       = f.input :description
-      = f.input :content, input_html: {data: {'pasteable-image-alt-prompt' => t('.alt_prompt'), 'pasteable-image-alt-default' => Image.model_name.human, 'pasteable-image-identifier-prompt' => t('.identifier_prompt')}}
+      = f.input :content, input_html: {data: {'pasteable-image-alt-prompt' => t('.alt_prompt'), 'pasteable-image-identifier-prompt' => t('.identifier_prompt')}}
 
       #images
         = f.simple_fields_for :images do |image|

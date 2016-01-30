@@ -12,6 +12,7 @@
 #= require bootstrap-formhelpers
 #= require cocoon
 #= require jasny-bootstrap
+#= require jquery-caret
 #= require fancybox
 #= require paste
 #

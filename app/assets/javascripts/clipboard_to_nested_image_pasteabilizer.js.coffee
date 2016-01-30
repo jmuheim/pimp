@@ -12,18 +12,34 @@ class App.ClipboardToNestedImagePasteabilizer
   makePastable: ->
     @$input.pastableTextarea()
     @$input.on('pasteImage', (ev, data) =>
+      alternative_text = prompt(@$input.data('pasteable-image-alt-prompt'))
+
+      return if alternative_text == null
+
+      identifier = prompt(@$input.data('pasteable-image-identifier-prompt'), slugify(alternative_text))
+
       @$add_image_link.click() # Add another file input field
       $nested_fields = $('.nested-fields:last')
-      console.log $file_field = $nested_fields.find(':input[id$="_file"]')
-      console.log $temporary_identifier_field = $nested_fields.find(':input[id$="_identifier"]')
-      temporary_id = $file_field.attr('id').match(/_(\d+)_file$/)[1]
+      $file_field = $nested_fields.find(':input[id$="_file"]')
+      $temporary_identifier_field = $nested_fields.find(':input[id$="_identifier"]')
+      identifier ||= $file_field.attr('id').match(/_(\d+)_file$/)[1]
 
       $file_field.val(data.dataURL)
-      $temporary_identifier_field.val(temporary_id)
+      $temporary_identifier_field.val(identifier)
 
-      alternative_text = prompt(@$input.data('pasteable-image-alt-prompt'), @$input.data('pasteable-image-alt-default'))
-      identifier = prompt(@$input.data('pasteable-image-identifier-prompt'), temporary_id)
-      @$input.val("#{@$input.val()}![#{alternative_text}](#{identifier})")
+
+      caret_position = @$input.caret()
+      value_before = @$input.val().substring(0, caret_position)
+      value_after = @$input.val().substring(caret_position)
+      image_text = "![#{alternative_text}](#{identifier})"
+
+      @$input.val(value_before + image_text + value_after)
+
+      @$input.caret(caret_position + image_text.length)
       return
     ).on 'pasteText', (ev, data) ->
       return
+
+  # https://gist.github.com/mathewbyrne/1280286
+  slugify = (text) ->
+    text.toString().toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-').replace(/^-+/, '').replace /-+$/, ''
