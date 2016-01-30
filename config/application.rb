@@ -47,9 +47,9 @@ end
 
 ActionMailer::Base.delivery_method = :smtp
 ActionMailer::Base.smtp_settings = {
-  address:              'sirius.uberspace.de',
+  address:              'suhail.uberspace.de',
   port:                 587,
-  domain:               'sirius.uberspace.de',
+  domain:               'suhail.uberspace.de',
   user_name:            'base-mailer',
   password:             'l3tm3s3nd3m41lS!',
   authentication:       'login',

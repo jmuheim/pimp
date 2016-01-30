@@ -10,9 +10,9 @@ require 'mina/git'
 #   repository   - Git repo to clone from. (needed by mina/git)
 #   branch       - Branch name to deploy. (needed by mina/git)
 
-set :server_name, 'sirius'
-set :user, 'base'
-set :repository_name, 'jmuheim/base'
+set :server_name, 'suhail'
+set :user, 'pimp'
+set :repository_name, 'jmuheim/pimp'
 set :forward_agent, true
 
 set :domain, "#{server_name}.uberspace.de"
@@ -85,4 +85,3 @@ end
 #  - http://nadarei.co/mina/tasks
 #  - http://nadarei.co/mina/settings
 #  - http://nadarei.co/mina/helpers
-
