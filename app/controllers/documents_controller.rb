@@ -4,16 +4,8 @@ class DocumentsController < InheritedResources::Base
   load_and_authorize_resource
   include UpdateLock
   before_filter :add_base_breadcrumbs
-  # before_filter :extract_temporary_id_to_image_identifier, only: [:create, :update]
 
   private
-
-  def extract_temporary_id_to_image_identifier
-    params[:document][:images_attributes].each do |identifier, image_attributes|
-      image_attributes[:identifier] = identifier
-    end
-    binding.pry
-  end
 
   def document_params
     params.require(:document).permit( :name,
