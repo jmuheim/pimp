@@ -50,7 +50,7 @@ ActionMailer::Base.smtp_settings = {
   address:              'suhail.uberspace.de',
   port:                 587,
   domain:               'suhail.uberspace.de',
-  user_name:            'base-mailer',
+  user_name:            'pimp-mailer',
   password:             'l3tm3s3nd3m41lS!',
   authentication:       'login',
   enable_starttls_auto: true
