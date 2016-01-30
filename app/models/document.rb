@@ -8,4 +8,23 @@ class Document < ActiveRecord::Base
     # Ignore lock_version and _destroy when checking for attributes
     attributes.all? { |key, value| %w(_destroy lock_version).include?(key) || value.blank? }
   }
+
+  def content_with_referenced_images
+    content_with_images
+  end
+
+  def content_with_embedded_images
+    content_with_images(false)
+  end
+
+  private
+
+  def content_with_images(referenced = true)
+    content.lines.map do |line|
+      images.each do |image|
+        line.gsub! /\(#{image.identifier}\)/, "(#{referenced ? image.file.url : image.file.path})"
+      end
+      line
+    end.join
+  end
 end

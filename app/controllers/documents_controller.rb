@@ -6,7 +6,43 @@ class DocumentsController < InheritedResources::Base
   before_filter :add_base_breadcrumbs
   before_filter :prepare_empty_image, only: [:new, :edit]
 
+  def show
+    respond_to do |format|
+      format.html do
+        if params[:standalone]
+          export
+        else
+          super
+        end
+      end
+
+      format.all do
+        export
+      end
+    end
+  end
+
   private
+
+  def export
+    string_to_export = "% #{@document.name}\n% #{current_user.name}\n% #{l Time.now}\n\n"
+
+    respond_to do |format|
+      format.html do
+        string_to_export += @document.content_with_referenced_images
+        render text: PandocRuby.convert(string_to_export, :s, to: :html, c: '/assets/application.css')
+      end
+
+      [:docx, :odt, :epub].each do |format_name|
+        format.send format_name do
+          string_to_export += @document.content_with_embedded_images
+          send_data PandocRuby.convert(string_to_export, to: format_name), filename:    "#{@document.name}.#{format_name}",
+                                                                           type:        "Mime::#{format_name.upcase}".constantize,
+                                                                           disposition: 'attachment'
+        end
+      end
+    end
+  end
 
   def prepare_empty_image
     resource.images.new unless resource.images.any?

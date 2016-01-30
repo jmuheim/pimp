@@ -9,10 +9,10 @@ de:
         content: Inhalt
         created_at: Erstellt am
         description: Beschreibung
+        images: Bilder
         lock_version: Anzahl Überspeichern
         name: Name
         updated_at: Aktualisiert am
-        images: Bilder
       image:
         created_at: Erstellt am
         file: Datei

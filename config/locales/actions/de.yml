@@ -9,9 +9,12 @@ de:
     edit: Bearbeiten
     edit_resource: "%{resource} bearbeiten"
     edit_resource_with_id: "%{resource} #%{id} bearbeiten"
+    export: Exportieren
+    export_to: Nach %{to_format} exportieren
     filter: Filtern
     new: Erstellen
     new_resource: "%{resource} erstellen"
+    preview_as: Vorschau als %{to_format}
     remove_filter: Filter entfernen
     results: Resultate
     show: Anzeigen

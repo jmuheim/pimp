@@ -9,10 +9,10 @@ en:
         content: Content
         created_at: Created at
         description: Description
+        images: Images
         lock_version: Number of overwrites
         name: Name
         updated_at: Updated at
-        images: Images
       image:
         created_at: Created at
         file: File

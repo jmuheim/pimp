@@ -78,6 +78,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw] # Timezone Data for T
 
 gem 'wannabe_bool' # Converts strings, integers, etc. intuitively to boolean values
 
+gem 'pandoc-ruby' # Lightweight Ruby wrapper for Pandoc
+
 gem 'differ' # A simple gem for generating string diffs
 
 group :doc do
