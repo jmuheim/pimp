@@ -8,6 +8,8 @@ en:
   documents:
     form:
       add_image: Add image
+      alt_prompt: Please enter alternative text
+      identifier_prompt: Please enter file name
     image_fields:
       remove_image: Remove image
   'false': 'No'

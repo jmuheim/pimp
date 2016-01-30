@@ -21,8 +21,8 @@ class App.ClipboardToNestedImagePasteabilizer
       $file_field.val(data.dataURL)
       $temporary_identifier_field.val(temporary_id)
 
-      alternative_text = prompt('Please enter the alt text for the image.', 'Screenshot')
-      identifier = prompt('Please enter the file name for the image.', temporary_id)
+      alternative_text = prompt(@$input.data('pasteable-image-alt-prompt'), @$input.data('pasteable-image-alt-default'))
+      identifier = prompt(@$input.data('pasteable-image-identifier-prompt'), temporary_id)
       @$input.val("#{@$input.val()}![#{alternative_text}](#{identifier})")
       return
     ).on 'pasteText', (ev, data) ->
