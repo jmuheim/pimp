@@ -8,8 +8,8 @@ de:
   documents:
     form:
       add_image: Bild hinzufügen
-      alt_prompt: Bitte Alternativtext eingeben
-      identifier_prompt: Bitte Dateinamen eingeben
+      alt_prompt: Alternativtext eingeben (leer lassen für dekoratives Bild)
+      identifier_prompt: Dateiname eingeben (leer lassen um Zufallszahl zu verwenden)
     image_fields:
       remove_image: Bild entfernen
   'false': Nein
