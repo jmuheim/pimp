@@ -2,7 +2,7 @@
 de:
   app:
     name: PIMP Editor
-    slogan: Vorkonfiguriertes grundlegendes Rails Projekt. Fork erstellen!
+    slogan: Bilder aus Zwischenablage einfügen, Markdown, Pandoc - minimalistisch und geil!
   buttons:
     save: Speichern
   documents:

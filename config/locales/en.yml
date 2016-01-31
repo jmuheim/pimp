@@ -2,7 +2,7 @@
 en:
   app:
     name: PIMP Editor
-    slogan: Pre-configured basic Rails project. Fork me!
+    slogan: Pasteable Images, Markdown, Pandoc - minimalistic and awesome!
   buttons:
     save: Save
   documents:
