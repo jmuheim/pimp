@@ -10,7 +10,14 @@
     = panel.body do
       = f.input :name
       = f.input :description
-      = f.input :content
+
+      .zennable
+        input#zen-toggle-comment type="checkbox" tabindex="-1"
+        .zen-backdrop
+          = f.input_field :content
+
+          label for="zen-toggle-comment" class="expander" Expand (ctrl+f)
+          label for="zen-toggle-comment" class="shrinker" Shrink (esc)
 
       #images
         = f.simple_fields_for :images do |image|

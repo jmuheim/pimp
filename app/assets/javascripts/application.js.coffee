@@ -13,6 +13,7 @@
 #= require cocoon
 #= require jasny-bootstrap
 #= require fancybox
+#= require zen-textarea
 #
 #= require_self
 #
