@@ -7,7 +7,6 @@ class App.TextareaFullscreenizer
     @$toggler = @$background.find('.toggler')
 
     @$toggler.click (e) =>
-      console.log 123
       @toggleFullscreen()
 
     @$textarea.keyup (e) =>
