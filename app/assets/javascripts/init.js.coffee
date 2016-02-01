@@ -31,5 +31,5 @@ class App.Init
           height: 100
 
   makeTextareasFullscreenizable: ($el) ->
-    $el.find('textarea').each ->
+    $el.find('textarea.text_fullscreen').each ->
       new App.TextareaFullscreenizer @
