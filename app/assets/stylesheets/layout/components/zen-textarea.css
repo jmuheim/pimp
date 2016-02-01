@@ -41,13 +41,15 @@
 .zennable input:checked ~ .zen-backdrop .shrinker {
   display: block;
   position: absolute;
-  top: 20%;
-  right: 20%;
+  top: 81px;
+  right: 25px;
 }
 
 .zennable input:checked ~ .zen-backdrop textarea {
   height: 100%;
-  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   resize: none;
   border-radius: 0;
   outline: none;
@@ -55,7 +57,7 @@
 
 .zennable input:checked ~ .zen-backdrop {
   position: fixed;
-  padding: 10%;
+  padding: 71px 15px 60px 15px;
   top: 0;
   right: 0;
   left: 0;

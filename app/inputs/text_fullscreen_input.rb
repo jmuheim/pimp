@@ -1,6 +1,5 @@
 class TextFullscreenInput < SimpleForm::Inputs::TextInput
   def input(wrapper_options)
-    binding.pry
     template.content_tag(:div, class: 'zennable') do
       template.content_tag(:input, id: checkbox_id, type: 'checkbox', tabindex: -1) do
         template.content_tag(:div, class: 'zen-backdrop') do
@@ -11,13 +10,13 @@ class TextFullscreenInput < SimpleForm::Inputs::TextInput
   end
 
   def expander
-    template.content_tag(:label, for: checkbox_id, class: 'expander') do
+    template.content_tag(:label, for: checkbox_id, class: 'expander', 'aria-hidden' => true) do
       'Expand (ctrl+f)'
     end
   end
 
   def shrinker
-    template.content_tag(:label, for: checkbox_id, class: 'shrinker') do
+    template.content_tag(:label, for: checkbox_id, class: 'shrinker', 'aria-hidden' => true) do
       'Shrink (esc)'
     end
   end
