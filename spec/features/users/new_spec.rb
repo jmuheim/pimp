@@ -104,7 +104,7 @@ describe 'Creating user' do
       visit new_user_path
 
       # This is a very fragile test, it only makes sure that the initialisation was done correctly.
-      #
+      # See http://stackoverflow.com/questions/35177110/testing-javascript-using-rspec-capybara-how-to-improve-my-spec-for-testing-a-t
       within '.user_about' do
         expect(page).to have_css '.textarea-fullscreenizer'
         expect(page).to have_css '.textarea-fullscreenizer-toggler', text: 'Toggle fullscreen (Esc)'
