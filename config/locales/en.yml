@@ -46,6 +46,7 @@ en:
       number_in_total: Number in total
   'true': 'Yes'
   users:
+    detail_inputs:
+      account_information: Account information
     form:
-      details: Details
       password: Password

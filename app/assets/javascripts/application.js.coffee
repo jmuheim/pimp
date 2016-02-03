@@ -20,9 +20,10 @@
 #
 # --- Add custom requires under here! ---
 #= require example_script
-#= require form_accessibilizer
 #= require clipboard_to_nested_image_pasteabilizer
 #= require clipboard_to_textarea_pasteabilizer
+#= require form_accessibilizer
+#= require textarea_fullscreenizer
 # --- Add custom requires above here! ---
 #
 #= require init

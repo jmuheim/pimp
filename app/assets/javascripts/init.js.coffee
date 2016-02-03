@@ -7,6 +7,7 @@ class App.Init
     @initFancybox @$el
     @makeTextareasPasteableToNestedImage @$el
     @makeTextareasPasteable @$el
+    @makeTextareasFullscreenizable @$el
 
   makeFormsAccessible: ($el) ->
     $el.find('form.simple_form').each ->
@@ -38,3 +39,7 @@ class App.Init
   makeTextareasPasteable: ($el) ->
     $el.find('[data-paste]').each ->
       new App.ClipboardToTextareaPasteabilizer @
+
+  makeTextareasFullscreenizable: ($el) ->
+    $el.find('textarea[data-textarea-fullscreenizer="true"]').each ->
+      new App.TextareaFullscreenizer @

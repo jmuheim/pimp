@@ -12,6 +12,8 @@ de:
         click_to_paste_another_image: Klicken, um ein anderes %{attribute}-Bild einzufügen
         image_preview: Bildvorschau
         paste_here: Hier einfügen
+      text_fullscreen:
+        toggler_text: Vollansicht umschalten (Esc)
       upload:
         click_to_choose_a_file: Klicken um eine %{attribute} Datei zu wählen
         click_to_choose_another_file: Klicken, um eine andere %{attribute}-Datei zu wählen
