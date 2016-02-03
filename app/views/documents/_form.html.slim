@@ -9,8 +9,8 @@
 
     = panel.body do
       = f.input :name
-      = f.input :description
-      = f.input :content
+      = f.input :description, as: :text_fullscreen
+      = f.input :content, as: :text_fullscreen
 
       #images
         = f.simple_fields_for :images do |image|
