@@ -98,4 +98,23 @@ describe 'Creating user' do
       expect(User.last.avatar.to_s).to eq ''
     end
   end
+
+  describe 'textarea fullscreen feature' do
+    it 'allows to toggle fullscreen mode of "about" textarea', focus: true, js: true do
+      visit new_user_path
+
+      # This is a very fragile test, it only makes sure that the initialisation was done correctly.
+      #
+      within '.user_about' do
+        expect(page).to have_css '.textarea-fullscreenizer'
+        expect(page).to have_css '.textarea-fullscreenizer-toggler', text: 'Toggle fullscreen (Esc)'
+
+        expect {
+          find('.textarea-fullscreenizer-toggler').click
+        }.to change {
+          page.has_css? '.textarea-fullscreenizer.textarea-fullscreenizer-focus'
+        }.to true
+      end
+    end
+  end
 end
