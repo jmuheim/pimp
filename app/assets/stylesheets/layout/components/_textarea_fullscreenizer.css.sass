@@ -27,10 +27,11 @@
     .textarea-fullscreenizer-toggler
       display: inline
 
-  &.textarea-fullscreenizer-fullscreen
-    .textarea-fullscreenizer-toggler
-
   &.textarea-fullscreenizer-focus
+    .textarea-fullscreenizer-toggler
+      opacity: 0.5
+
+  &.textarea-fullscreenizer-fullscreen
     .textarea-fullscreenizer-toggler
       opacity: 1
 
@@ -43,7 +44,7 @@
     position: absolute
     top: 6px
     right: 6px
-    opacity: 0.5
+    opacity: 0.25
 
     &:hover
       cursor: pointer
