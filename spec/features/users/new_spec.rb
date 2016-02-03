@@ -100,7 +100,7 @@ describe 'Creating user' do
   end
 
   describe 'textarea fullscreen feature' do
-    it 'allows to toggle fullscreen mode of "about" textarea', focus: true, js: true do
+    it 'allows to toggle fullscreen mode of "about" textarea', js: true do
       visit new_user_path
 
       # This is a very fragile test, it only makes sure that the initialisation was done correctly.
