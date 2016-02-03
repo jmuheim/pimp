@@ -1,13 +1,7 @@
 class TextFullscreenInput < SimpleForm::Inputs::TextInput
   def input(wrapper_options)
-    template.content_tag(:div, class: 'background') do
-      super + toggler
-    end
-  end
+    super wrapper_options.merge 'data-textarea-fullscreenizer' => true,
+      'data-textarea-fullscreenizer-toggler-text' => I18n.t('simple_form.inputs.text_fullscreen.toggler_text')
 
-  def toggler
-    template.content_tag(:span, class: 'toggler label label-primary', 'aria-hidden' => true) do
-      I18n.t('simple_form.inputs.text_fullscreen.toggle')
-    end
   end
 end

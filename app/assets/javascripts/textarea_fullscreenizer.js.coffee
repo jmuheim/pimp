@@ -3,8 +3,12 @@
 class App.TextareaFullscreenizer
   constructor: (textarea) ->
     @$textarea = $(textarea)
+
+    @$textarea.wrap("<div class='textarea-fullscreenizer'></div>")
     @$background = @$textarea.parent()
-    @$toggler = @$background.find('.toggler')
+
+    @$background.append("<span class='textarea-fullscreenizer-toggler' aria-hidden='true'>#{@$textarea.data('textarea-fullscreenizer-toggler-text')}</span>")
+    @$toggler = @$background.find('.textarea-fullscreenizer-toggler')
 
     @$toggler.click (e) =>
       @toggleFullscreen()
@@ -14,14 +18,14 @@ class App.TextareaFullscreenizer
         @toggleFullscreen()
 
     @$textarea.on 'focus', =>
-      @$background.addClass('focus')
+      @$background.addClass('textarea-fullscreenizer-focus')
 
     @$textarea.on 'blur', =>
-      @$background.removeClass('focus')
+      @$background.removeClass('textarea-fullscreenizer-focus')
 
-      if @$background.hasClass('fullscreen')
+      if @$background.hasClass('textarea-fullscreenizer-fullscreen')
         @toggleFullscreen(false)
 
   toggleFullscreen: (setFocus = true) ->
-    @$background.toggleClass('fullscreen')
+    @$background.toggleClass('textarea-fullscreenizer-fullscreen')
     @$textarea.focus() if setFocus
