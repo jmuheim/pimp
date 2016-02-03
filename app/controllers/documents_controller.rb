@@ -26,7 +26,7 @@ class DocumentsController < InheritedResources::Base
 
   def export
     now = Time.now
-    string_to_export = "% #{@document.name}\n% #{logged_in? ? current_user.name : 'Unknown'}\n% #{l now}\n\n"
+    string_to_export = "% #{@document.name}\n% #{signed_in? ? current_user.name : 'Unknown'}\n% #{l now}\n\n"
 
     respond_to do |format|
       format.html do
