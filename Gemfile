@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.1'
+gem 'rails', '~> 4.2.5'
 
 gem 'rails-i18n' # Locale data
 
@@ -8,9 +8,9 @@ gem 'slim-rails' # Awesome template language that replaces ERB
 
 gem 'uglifier', '>= 1.3.0' # Use Uglifier as compressor for JavaScript assets
 
-gem 'coffee-rails', '~> 4.0.0' # Use CoffeeScript for .js.coffee assets and views
+gem 'coffee-rails', '>= 4.0.0' # Use CoffeeScript for .js.coffee assets and views
 
-gem 'sass-rails', '~> 4.0.0' # Use Sass for stylesheets
+gem 'sass-rails', '>= 4.0.0' # Use Sass for stylesheets
 
 gem 'compass-rails' # Compass framework
 
@@ -21,11 +21,13 @@ gem 'bootstrap-sass' # Sleek, intuitive, and powerful front-end framework
 
 gem 'font-awesome-rails' # The iconic font and CSS toolkit
 
+gem 'tilt', github: 'jmuheim/tilt' # path: '../../tests/tilt'
+
 # jQuery
 gem 'jquery-rails'
 gem 'jquery-ui-rails' # jQuery UI components
 
-gem 'jbuilder', '~> 1.2' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'jbuilder', '>= 1.2' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 
 # Flexible authentication solution
 gem 'devise'
@@ -40,7 +42,7 @@ gem 'inherited_resources', '>= 1.4.1'
 gem 'has_scope' # Maps controller filters to resource scopes
 gem 'responders' # A set of Rails responders
 
-gem 'simple_form', github: 'plataformatec/simple_form' # Forms made easy for Rails
+gem 'simple_form' # Forms made easy for Rails
 
 gem 'gaffe' # Handles Rails error pages in a clean, simple way
 
@@ -50,7 +52,7 @@ gem 'validates_timeliness' # Date and time validation plugin for ActiveModel and
 
 gem 'navigasmic' # Semantic navigation
 
-gem 'nilify_blanks' # Save NULLs instead of empty strings into the database
+gem 'strip_attributes' # Automatically strips all attributes of leading and trailing whitespace (or nilify if blank)
 
 gem 'enumerize' # Enumerated attributes with I18n
 
@@ -58,9 +60,11 @@ gem 'breadcrumbs_on_rails' # A simple plugin for creating and managing a breadcr
 
 gem 'rails_admin' # Rails Admin: engine that provides an easy-to-use interface for managing data
 
-gem 'paper_trail', '~> 4.0.0.rc' # Track changes to your models' data. Good for auditing or versioning.
+gem 'paper_trail', '>= 4.0.0.rc' # Track changes to your models' data. Good for auditing or versioning.
 
-gem 'carrierwave' # Classier solution for file uploads for Rails
+# Classier solution for file uploads for Rails
+gem 'carrierwave'
+gem 'carrierwave-base64' # Upload files encoded as base64 to carrierwave
 
 gem 'mini_magick' # Mini replacement for RMagick
 
@@ -68,7 +72,7 @@ gem 'fancybox2-rails' # Fancybox (lightbox clone)
 
 gem 'slugify' # Turn a string into its alphanumerical dashed equivalent
 
-gem 'redcarpet' # Markdown parser
+gem 'pandoc-ruby' # Markdown parser and format converter (from/to Markdown, HTML, Docx, PDF, Epub, ODT...)
 
 gem 'ransack' # Object-based searching
 
@@ -98,8 +102,8 @@ group :development, :test do
   gem 'ffaker'             # Easily generate fake data
 
   # Use Pry and its extensions instead of IRB
-  gem 'jazz_hands', github: 'nixme/jazz_hands',
-                    branch: 'bring-your-own-debugger'
+  gem 'pry-rails' # Rails >= 3 pry initializer
+  gem 'awesome_print' # Pretty print your Ruby objects with style
   gem 'pry-byebug'  # Pry navigation commands via debugger (formerly ruby-debug)
 end
 
@@ -133,10 +137,6 @@ group :development do
 
   gem 'rubocop', require: false # A robust Ruby code analyzer, based on the community Ruby style guide
 
-  gem 'rip_hashrocket', # Replace hashrockets (=>) automatically
-       github:  'jmuheim/rip_hashrocket',
-       require: false
-
   gem 'capybara', '>=2.2.0.beta' # Acceptance test framework for web applications
 
   gem 'rails-footnotes' # Every Rails page has footnotes that gives information about your application
@@ -151,7 +151,7 @@ group :test do
 
   gem 'respec', require: false # Allows to rerun failed specs (first do `respec` to run all, then `respec f` or `respec 123` to run failed)
 
-  gem 'fuubar', '~> 2.0.0rc1' # The instafailing RSpec progress bar formatter
+  gem 'fuubar', '>= 2.0.0rc1' # The instafailing RSpec progress bar formatter
 
   gem 'email_spec' # Collection of RSpec matchers for testing email
 
@@ -166,16 +166,14 @@ group :test do
 
   gem 'capybara-screenshot' # Automatically save screen shots when a scenario fails
 
-  gem 'headhunter' # Automagically validates all HTML and CSS during feature tests
-
-  gem 'i18n-tasks'
+  gem 'i18n-tasks' # Manage translation and localization with static analysis
 
   gem 'codeclimate-test-reporter', require: nil
 end
 
 group :production do
   # Use specific version because of this bug: https://github.com/rails/rails/issues/21544
-  gem 'mysql2', '~> 0.3.18' # Use MySQL as the database for Active Record
+  gem 'mysql2', '>= 0.3.18' # Use MySQL as the database for Active Record
 end
 
 # Use ActiveModel has_secure_password

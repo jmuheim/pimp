@@ -83,6 +83,10 @@ RSpec.configure do |config|
   config.before(:each) do
     travel_to DateTime.parse('2015-06-15 14:33:52 +0200')
   end
+
+  config.after(:each) do
+    travel_back
+  end
 end
 
 RSpec.configure do |config|
@@ -94,4 +98,9 @@ Shoulda::Matchers.configure do |config|
     with.test_framework :rspec
     with.library :rails
   end
+end
+
+require 'strip_attributes/matchers'
+RSpec.configure do |config|
+  config.include StripAttributes::Matchers
 end

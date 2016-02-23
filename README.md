@@ -20,6 +20,8 @@ Setup:
 
 You can use [direnv](https://github.com/zimbatm/direnv) to automatically add `bin` to your `$PATH`. Otherwise you should always use `bundle exec` to run commands.
 
+Be sure to have [Pandoc](http://pandoc.org/) installed (on Mac: `$ brew install pandoc`).
+
 ## Developing
 
 - In one terminal, enter `$ server` to start the development server using [rerun](https://github.com/alexch/rerun) (which will take care of restarting the server upon changes of important config files)
@@ -30,7 +32,6 @@ You can use [direnv](https://github.com/zimbatm/direnv) to automatically add `bi
     - annotating models using [Guard-Annotate](https://github.com/cpjolicoeur/guard-annotate)
     - migrating the DB using [Guard-Migrate](https://github.com/glanotte/guard-migrate)
 - Open [http://localhost:PORT](http://localhost:PORT) in your browser (use whatever port you specified in `config/boot.rb`)
-- Execute `$ rip_hashrockets` from time to time to replace old Ruby hashrockets (`=>`) with the new syntax
 
 ### Before merging a pull request
 

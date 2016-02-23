@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'Editing user' do
-  before { @user = create :user, :donald }
+  before { @user = create :user, :donald, about: 'This is some very interesting info about me. I like playing football and reading books. I work as a web developer.' }
 
   context 'as a guest' do
     it 'does not grant permission to edit a user' do
@@ -77,7 +77,7 @@ describe 'Editing user' do
 
       expect(page).to have_css '#stale_attribute_user_about .interim_value', text: 'This is some barely interesting info. I like playing football and reading books. I don\'t work as a web developer anymore.'
       expect(page).to have_css '#stale_attribute_user_about .new_value',     text: 'This is some very interesting info about me. I like playing football and reading books. I work as a web developer.'
-      expect(page.html).to include "<p><del class=\"differ\">This is some barely interesting info.</p>\n\n<p>I like playing football and reading books.</p>\n\n<p>I don't work as a web developer anymore.</del><ins class=\"differ\">This is some very interesting info about me.</p>\n\n<p>I like playing football and reading books.</p>\n\n<p>I work as a web developer.</ins></p>"
+      expect(page.html).to include "<p><del class=\"differ\">This is some barely interesting info.</p>\n\n<p>I like playing football and reading books.</p>\n\n<p>I don't work as a web developer anymore.</del><ins class=\"differ\">This is some very interesting info about me. I like playing football and reading books. I work as a web developer.</ins></p>"
 
       expect(page).to have_css '#stale_attribute_user_avatar .interim_value img[alt="Interim image"]'
       expect(page).to have_css '#stale_attribute_user_avatar .new_value img[alt="New image"]'
