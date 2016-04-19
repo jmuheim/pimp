@@ -16,7 +16,7 @@ class App.ClipboardToNestedImagePasteabilizer
     @$input.on('pasteImage', (ev, data) =>
       alternative_text = prompt(@alt_prompt)
       return if alternative_text == null
-      identifier = prompt(@identifier_prompt, slugify(alternative_text))
+      identifier = prompt(@identifier_prompt, @slugify(alternative_text))
 
       @$add_image_link.click() # Add another file input field
       $nested_fields = $('.nested-fields:last')
@@ -53,6 +53,6 @@ class App.ClipboardToNestedImagePasteabilizer
     ).on 'pasteText', (ev, data) ->
       return
 
-  # https://gist.github.com/mathewbyrne/1280286
-  slugify = (text) ->
+    # https://gist.github.com/mathewbyrne/1280286
+  slugify: (text) ->
     text.toString().toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-').replace(/^-+/, '').replace /-+$/, ''

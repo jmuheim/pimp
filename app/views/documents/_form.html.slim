@@ -10,7 +10,7 @@
     = panel.body do
       = f.input :name
       = f.input :description, as: :text_fullscreen
-      = f.input :content, as: :text_fullscreen
+      = f.input :content, as: :text_fullscreen, input_html: {data: {'pasteable-image-alt-prompt' => t('.alt_prompt'), 'pasteable-image-identifier-prompt' => t('.identifier_prompt')}}
 
   = panel do |panel|
     = panel.heading do
