@@ -2,12 +2,14 @@
 de:
   app:
     name: PIMP Editor
-    slogan: Vorkonfiguriertes grundlegendes Rails Projekt. Fork erstellen!
+    slogan: Bilder aus Zwischenablage einfügen, Markdown, Pandoc - minimalistisch und geil!
   buttons:
     save: Speichern
   documents:
     form:
       add_image: Bild hinzufügen
+      alt_prompt: Alternativtext eingeben (leer lassen für dekoratives Bild)
+      identifier_prompt: Dateiname eingeben (leer lassen um Zufallszahl zu verwenden)
     image_fields:
       remove_image: Bild entfernen
   'false': Nein

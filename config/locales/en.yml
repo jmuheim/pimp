@@ -2,12 +2,14 @@
 en:
   app:
     name: PIMP Editor
-    slogan: Pre-configured basic Rails project. Fork me!
+    slogan: Pasteable Images, Markdown, Pandoc - minimalistic and awesome!
   buttons:
     save: Save
   documents:
     form:
       add_image: Add image
+      alt_prompt: Enter alternative text (leave empty for decorative image)
+      identifier_prompt: Enter file name (leave empty to use random number)
     image_fields:
       remove_image: Remove image
   'false': 'No'

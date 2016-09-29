@@ -9,6 +9,7 @@ class Document < ActiveRecord::Base
     attributes.all? { |key, value| %w(_destroy lock_version).include?(key) || value.blank? }
   }
 
+
   def content_with_referenced_images
     content_with_images
   end
@@ -24,6 +25,7 @@ class Document < ActiveRecord::Base
       images.each do |image|
         line.gsub! /\(#{image.identifier}\)/, "(#{referenced ? image.file.url : image.file.path})"
       end
+
       line
     end.join
   end

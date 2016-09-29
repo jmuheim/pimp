@@ -9,13 +9,6 @@
       .content
         pre = document.content
 
-    - if document.images.any?
-      h2 = Document.human_attribute_name :images
-      .images
-        = image_gallery do |gallery|
-          - document.images.each do |image|
-            = gallery.zoomable_image(image.file)
-
     .actions
       h2.sr-only = t 'actions.export'
 
@@ -29,6 +22,13 @@
     h2 = t 'shared.show.additional_information'
 
     dl
+    - if document.images.any?
+      dt = Document.human_attribute_name :images
+      dd.images
+        = image_gallery do |gallery|
+          - document.images.each do |image|
+            = gallery.zoomable_image(image.file)
+
       dt = Document.human_attribute_name :lock_version
       dd.lock_version = document.lock_version
 

@@ -1,4 +1,7 @@
-# PIMP - Pasteable Images Markdown Pad
+Download von Docx in Firefox/Chrome/IE funktioniert nicht immer?! (PIMP)
+Pasten von Text in image-pasteable Textarea funktioniert im FF nicht!
+
+# PIMP - Pasteable Images, Markdown, Pandoc
 
 TODO: Add badges!
 

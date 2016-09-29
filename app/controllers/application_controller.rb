@@ -1,6 +1,8 @@
 require 'application_responder'
 
 class ApplicationController < ActionController::Base
+  http_basic_authenticate_with name: 'pimp', password: 'markdown-rocks' unless Rails.env.test?
+
   helper :image_gallery
 
   helper_method :body_css_classes

@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'Editing document' do
   before { login_as create :user }
 
-  it 'grants permission to edit a document' do
+  it 'grants permission to edit a document', js: true do
     @document = create :document, :with_image
     visit edit_document_path(@document)
 
@@ -15,7 +15,8 @@ describe 'Editing document' do
     fill_in 'document_description', with: 'Cooool description!'
     fill_in 'document_content',     with: 'Some nice content'
 
-    attach_file 'document_images_attributes_0_file', dummy_file_path('other_image.jpg')
+    fill_in "document_images_attributes_0_file", with: base64_other_image[:data]
+    fill_in "document_images_attributes_0_identifier", with: 'some-identifier'
 
     expect {
       click_button 'Update Document'
@@ -23,7 +24,8 @@ describe 'Editing document' do
     } .to  change { @document.name }.to('A new name')
       .and change { @document.description }.to('Cooool description!')
       .and change { @document.content }.to('Some nice content')
-      .and change { @document.images.first.file.file.identifier }.to('other_image.jpg')
+      .and change { @document.images.first.file.file.identifier }.to('file.png')
+      .and change { @document.images.first.identifier }.to('some-identifier')
   end
 
   it "prevents from overwriting other users' changes accidently (caused by race conditions)" do

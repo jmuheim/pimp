@@ -4,7 +4,6 @@ class DocumentsController < InheritedResources::Base
   load_and_authorize_resource
   include UpdateLock
   before_filter :add_base_breadcrumbs
-  before_filter :prepare_empty_image, only: [:new, :edit]
 
   def show
     respond_to do |format|
@@ -46,10 +45,6 @@ class DocumentsController < InheritedResources::Base
     end
   end
 
-  def prepare_empty_image
-    resource.images.new unless resource.images.any?
-  end
-
   def document_params
     params.require(:document).permit( :name,
                                       :description,
@@ -57,6 +52,8 @@ class DocumentsController < InheritedResources::Base
                                       :lock_version,
                                       images_attributes: [ :id,
                                                            :file,
+                                                           :file_cache,
+                                                           :identifier,
                                                            :_destroy
                                                          ]
                                     )

@@ -5,6 +5,8 @@ class App.Init
     @makeFormsAccessible @$el
     @initTooltips @$el
     @initFancybox @$el
+    @makeTextareasPasteableToNestedImage @$el
+    @makeTextareasPasteable @$el
     @makeTextareasFullscreenizable @$el
 
   makeFormsAccessible: ($el) ->
@@ -29,6 +31,14 @@ class App.Init
         thumbs:
           width: 100,
           height: 100
+
+  makeTextareasPasteableToNestedImage: ($el) ->
+      new App.ClipboardToNestedImagePasteabilizer $el
+
+
+  makeTextareasPasteable: ($el) ->
+    $el.find('[data-paste]').each ->
+      new App.ClipboardToTextareaPasteabilizer @
 
   makeTextareasFullscreenizable: ($el) ->
     $el.find('textarea[data-textarea-fullscreenizer="true"]').each ->

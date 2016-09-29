@@ -16,7 +16,7 @@ de:
       image:
         created_at: Erstellt am
         file: Datei
-        identifier: Identifikator
+        identifier: Identifizierungsmerkmal
         updated_at: Aktualisiert am
       role:
         created_at: Erstellt am

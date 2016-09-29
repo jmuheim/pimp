@@ -523,7 +523,7 @@ DEPENDENCIES
   navigasmic
   pandoc-ruby
   paper_trail (>= 4.0.0.rc)
-  poltergeist (= 1.7.0)
+  poltergeist
   pry-byebug
   pry-rails
   quiet_assets
